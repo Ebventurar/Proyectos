@@ -34,8 +34,7 @@ a {
 }
 
 main {
-  margin-top: 150px;
-  margin-bottom: 40px;
+  margin: 150px 70px 40px 70px;
 }
 
 h1 {
@@ -52,6 +51,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
 #nav_principal {
@@ -60,9 +60,9 @@ h1 {
   align-items: center;
   border-radius: 50px;
   padding: 10px 15px;
-  background-color: hsla(0, 0%, 40%, 0.5);
-  -webkit-backdrop-filter: blur(40px) saturate(2);
-          backdrop-filter: blur(40px) saturate(2);
+  background-color: hsla(0, 0%, 40%, 0.4);
+  -webkit-backdrop-filter: blur(15px) saturate(2);
+          backdrop-filter: blur(15px) saturate(2);
   gap: 10px;
 }
 
@@ -87,21 +87,51 @@ h1 {
   padding: 0 120px;
 }
 #navFooter h3 {
-  font-size: 25px;
+  font-size: 24px;
+  font-weight: 500;
 }
 #navFooter a {
-  color: rgb(90, 230, 255);
+  color: #fff;
 }
 #navFooter a img {
   width: 50px;
   height: 50px;
 }
 
-main .p_inicio {
+main .p_inicio, main #sobremi_descripcion {
   font-size: 20px;
   margin: auto 70px;
   padding: 0 150px;
   text-align: center;
+}
+main a {
+  text-decoration: underline;
+}
+
+#sobremi_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+#sobremi_info #cont_img_perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: hsla(0, 0%, 40%, 0.4);
+  -webkit-backdrop-filter: blur(20px) saturate(3);
+          backdrop-filter: blur(20px) saturate(3);
+  border-radius: 50%;
+  overflow: hidden;
+}
+#sobremi_info #cont_img_perfil #foto_perfil {
+  filter: none;
+  filter: contrast(120%);
+  width: 100%;
+  height: 100%;
 }
 
 #grid_proyectos {
@@ -110,30 +140,35 @@ main .p_inicio {
   color: black;
   grid-template-columns: repeat(3, 25%);
   justify-content: center;
-  gap: 45px;
-  row-gap: 25px;
+  gap: 30px;
+  row-gap: 30px;
 }
 
 .cont_proyecto {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 25em;
   background-color: #fff;
   border-radius: 25px;
   padding: 25px;
   gap: 10px;
-  transition: 0.7s;
+  transition: all 0.7s;
 }
 .cont_proyecto h2 {
-  color: #666666;
+  color: #000;
+  font-weight: 700;
 }
 .cont_proyecto .img_proyecto {
   border-radius: 10px;
   width: 100%;
 }
-.cont_proyecto .descricion_proyecto {
+.cont_proyecto .descripcion_proyecto {
   text-align: left;
+  color: #000;
+  font-weight: 300;
 }
 .cont_proyecto:hover {
   transform: scale(1.05);
+  transform-origin: 50% 50%;
 }/*# sourceMappingURL=styles.css.map */
