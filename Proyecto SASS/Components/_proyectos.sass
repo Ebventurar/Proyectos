@@ -1,0 +1,27 @@
+#grid_proyectos
+    width: 100%
+    display: grid
+    color: black
+    grid-template-columns: repeat(3, 25%)
+    justify-content: center
+    gap: 45px
+    row-gap: 25px
+
+.cont_proyecto
+    display: flex
+    flex-direction: column
+    width: 100%
+    background-color: #fff
+    border-radius: 25px
+    padding: 25px
+    gap: 10px
+    transition: 0.7s 
+    h2
+        color: #666666
+    .img_proyecto
+        border-radius: 10px
+        width: 100%
+    .descricion_proyecto
+        text-align: left
+    &:hover
+        transform: scale(1.05)
