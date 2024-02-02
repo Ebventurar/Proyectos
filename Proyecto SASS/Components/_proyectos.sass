@@ -26,9 +26,17 @@
         width: 100%
     .descripcion_proyecto
         text-align: left
-        color: #000
-        font-weight: 300
+        color: #626262
+        font-weight: 400
 
     &:hover
         transform: scale(1.05)
         transform-origin: 50% 50%
+
+@media (max-width: 650px) 
+    #grid_proyectos
+        grid-template-columns: 1fr
+
+@media (min-width: 650px) and (max-width: 1060px)
+    #grid_proyectos
+        grid-template-columns: 1fr 1fr

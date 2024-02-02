@@ -3,7 +3,7 @@
     padding: 10px 15px
 
 #navbar
-    width: 100%
+    width: 100vw
     position: fixed
     top: 25px
     @include divCentrado
@@ -13,8 +13,7 @@
 #nav_principal
     @include divCentrado
     @include border_padding_nav
-    background-color: $transparenteClaro
-    backdrop-filter: blur(15px) saturate(2)
+    @include efectoFondoTansparente($transparenteClaro, 15px, 2)
     gap: 10px
 
 .nav_bt
@@ -23,3 +22,7 @@
     transition: 0.8s
     &:hover
         background-color: $transparenteOscuro
+
+@media (max-width: 600px) 
+    #nav_principal
+        gap: 5px

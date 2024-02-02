@@ -38,8 +38,17 @@ h1
     text-align: center
     margin: 60px 0
 
-
 @mixin divCentrado
     display: flex
     justify-content: center
     align-items: center
+
+@mixin efectoFondoTansparente($colorfondo, $blur, $saturado)
+    background-color: $colorfondo
+    backdrop-filter: blur($blur) saturate($saturado)    
+
+@media (max-width: 600px) 
+    main
+        margin: 150px 30px 40px 30px
+    h1
+        font-size: 60px
